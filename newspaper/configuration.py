@@ -131,6 +131,7 @@ class Configuration:
         self.max_authors = 10  # num strings in list
         self.max_summary = 5000  # num of chars
         self.max_summary_sent = 5  # num of sentences
+        self.split_title = False
 
         # max number of urls we cache for each news source
         self.max_file_memo = 20000

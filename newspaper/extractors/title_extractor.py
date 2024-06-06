@@ -104,7 +104,7 @@ class TitleExtractor:
             title_text = title_text_fb
             used_delimeter = True
 
-        if not used_delimeter:
+        if not used_delimeter and self.config.split_title:
             for delimiter in ["|", "-", "_", "/", " » "]:
                 if delimiter in title_text:
                     title_text = self._split_title(title_text, delimiter, title_text_h1)
