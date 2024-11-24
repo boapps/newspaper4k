@@ -47,7 +47,7 @@ def extract_meta_refresh(html):
         ct=ga&cd=CAAYATIaYTc4ZTgzYjAwOTAwY2M4Yjpjb206ZW46VVM&
         usg=AFQjCNF7zAl6JPuEsV4PbEzBomJTUpX4Lg
     """
-    soup = BeautifulSoup(html, "html.parser")
+    soup = BeautifulSoup(html, "lxml")
     element = soup.find("meta", attrs={"http-equiv": "refresh"})
     if element:
         try:
